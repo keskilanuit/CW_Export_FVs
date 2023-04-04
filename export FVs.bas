@@ -20,8 +20,8 @@ Sub Export_FVs()
         'add more Or ws.name = " " ' as needed
         
         
-            'Set the file name to be the original file name and the worksheet name
-            FileName = wb.Name & " - " & ws.Name & ".xlsx"
+            'Set the file name to be the original file name and the worksheet name without extension after the orignal file name'
+            FileName = Left(ActiveWorkbook.Name, InStrRev(ActiveWorkbook.Name, ".") - 1) & " - " & ws.Name & ".xlsx"
             'Check if the file already exists in the save folder
             If Len(Dir(SaveToFolder & FileName)) > 0 Then
                 'If the file exists, save on top of it
