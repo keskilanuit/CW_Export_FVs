@@ -44,6 +44,6 @@ Sub Export_FVs()
     Next ws
     
     'Display a message box indicating which worksheets have been exported
-    MsgBox "The following worksheets have been exported to " & SaveToFolder & ":" & vbNewLine & ExportedWorksheets & ".", vbInformation, "Worksheets Exported"
+    MsgBox "The following worksheets have been exported to " & SaveToFolder & ": " & vbNewLine & ExportedWorksheets & ".", vbInformation, "Worksheets Exported"
     
 End Sub
